@@ -38,7 +38,6 @@ if __name__ == "__main__":
 
     dat = pd.read_csv("data/raw/winequality.csv")
     print(dat.head(10))
-    print()
 
     # Split the data into training and test sets. (0.75, 0.25) split.
     train, test = train_test_split(dat)
@@ -57,8 +56,6 @@ if __name__ == "__main__":
     with mlflow.start_run():
         lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42)
         lr.fit(train_x, train_y)
-        
-        #lr.save("trainedModel.h5")
 
         predicted_qualities = lr.predict(test_x)
 
