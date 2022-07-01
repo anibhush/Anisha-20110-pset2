@@ -36,8 +36,9 @@ if __name__ == "__main__":
     #warnings.filterwarnings("ignore")
     #np.random.seed(40)
 
-    dat = pd.read_csv("../data/raw/winequality.csv")
+    dat = pd.read_csv("data/raw/winequality.csv")
     print(dat.head(10))
+    print()
 
     # Split the data into training and test sets. (0.75, 0.25) split.
     train, test = train_test_split(dat)
