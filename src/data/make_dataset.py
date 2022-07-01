@@ -4,8 +4,8 @@ import logging
 from pathlib import Path
 from dotenv import find_dotenv, load_dotenv
 import os
-import tensorflow as tf
-from keras.datasets import mnist
+# import tensorflow as tf
+# from keras.datasets import mnist
 
 
 @click.command()
