@@ -1,7 +1,7 @@
 Anisha-20110-pset2
 ==============================
 
-assignment 2 MLOps
+assignment 2 ML-Ops
 
 Project Organization
 ------------
@@ -55,3 +55,34 @@ Project Organization
 --------
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+
+
+# Steps:
+
+Step 1: Create Git repo create DagsHub repo: https://dagshub.com and connect to the github repo
+
+Step 2: install DVC configure dvc:
+
+    dvc init
+
+    dvc remote add origin https://dagshub.com/anibhush/Anisha-20110-pset2.dvc
+    dvc remote modify origin --local auth basic
+    dvc remote modify origin --local user anibhush
+    dvc remote modify origin --local password <DAGSHUB_TOKEN>
+
+    dvc pull -r origin
+    dvc add data/raw
+    dvc push -r origin    
+    
+Step 3:
+
+    install mlflow
+
+    # add the following in the python code!
+    mlflow.set_tracking_uri("https://dagshub.com/anibhush/Anisha-20110-pset2.mlflow")
+    tracking_uri = mlflow.get_tracking_uri()
+    print("Current tracking uri: {}".format(tracking_uri))
+
+    export MLFLOW_TRACKING_USERNAME=anibhush
+    export MLFLOW_TRACKING_PASSWORD=$DAGSHUB_TOKEN
+ 

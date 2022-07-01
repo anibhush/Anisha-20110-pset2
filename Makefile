@@ -37,6 +37,20 @@ clean:
 ## Lint using flake8
 lint:
 	flake8 src
+	
+setup:
+	python3 -m venv ~/.Anisha-20110-pset2
+	source ~/.Anisha-20110-pset2/bin/activate
+
+install:
+	pip3 install --upgrade pip &&\
+	  pip3 install -r requirements.txt
+	
+test:
+	python3 -m pytest -vv -cov=hello hello_test.py
+
+# lint:
+# 	pylint --disable R,C hello.py
 
 ## Upload Data to S3
 sync_data_to_s3:
