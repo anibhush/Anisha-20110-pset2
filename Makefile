@@ -45,6 +45,12 @@ setup:
 install:
 	pip3 install --upgrade pip &&\
 	  pip3 install -r requirements.txt
+	  
+prepare:
+	python3 src/data/load_and_process_data.py
+
+train:
+	python3 src/models/train_model.py 
 	
 test:
 	python3 -m pytest -vv -cov=hello hello_test.py
