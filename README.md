@@ -52,8 +52,8 @@ Inorder to run the model, you will need to set your mlflow and dagshub credentia
     
     
 # Data Flow Pipeline:
-    <img width="1636" alt="image" src="https://user-images.githubusercontent.com/32108645/177392591-d6331985-520d-4e5f-bc68-5fbee58fc423.png">
+<img width="1636" alt="image" src="https://user-images.githubusercontent.com/32108645/177392591-d6331985-520d-4e5f-bc68-5fbee58fc423.png">
 
 
 # ML Flow:
-    <img width="1368" alt="image" src="https://user-images.githubusercontent.com/32108645/177392741-f32f72fe-202c-4674-b9ca-e203a5ccc0f4.png">
+<img width="1368" alt="image" src="https://user-images.githubusercontent.com/32108645/177392741-f32f72fe-202c-4674-b9ca-e203a5ccc0f4.png">
