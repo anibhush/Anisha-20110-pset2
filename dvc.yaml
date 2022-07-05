@@ -15,10 +15,3 @@ stages:
     outs:
     - data/processed/winequality_train.csv
     - data/processed/winequality_test.csv
-
-  # model_train:
-  #   cmd: python src/models/train_model.py --config=params.yaml
-  #   deps:
-  #   - data/processed/churn_train.csv
-  #   - data/processed/churn_test.csv
-  #   - src/models/train_model.py
