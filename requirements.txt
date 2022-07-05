@@ -18,4 +18,5 @@ dvc
 joblib
 scikit-learn
 mlflow
-yaml
+wheel
+pandas
