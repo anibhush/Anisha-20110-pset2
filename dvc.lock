@@ -1,0 +1,15 @@
+schema: '2.0'
+stages:
+  raw_dataset_creation:
+    cmd: python src/data/load_data.py --config=params.yaml
+    deps:
+    - path: data/external/winequality.csv
+      md5: 334fbfa1152537a0cf0251e73bb6469c
+      size: 85775
+    - path: src/data/load_data.py
+      md5: dc47b87a59c53b6fee99164d72bea0a3
+      size: 658
+    outs:
+    - path: data/raw/winequality.csv
+      md5: 2daeecee174368f8a33b82c8cccae3a5
+      size: 84199

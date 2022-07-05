@@ -1,0 +1,16 @@
+external_data_config:
+  external_data_csv: data/external/winequality.csv
+
+raw_data_config: 
+  raw_data_csv: data/raw/winequality.csv
+  model_var: ['fixed acidity','volatile acidity','citric acid','residual sugar','chlorides','free sulfur dioxide','total sulfur dioxide','density','pH','sulphates','alcohol','quality']
+  train_test_split_ratio: 0.2
+  target: quality 
+  random_state: 111
+
+processed_data_config:
+  train_data_csv: data/processed/winequality_train.csv
+  test_data_csv:  data/processed/winequality_test.csv
+
+model_dir: models/model.joblib
+

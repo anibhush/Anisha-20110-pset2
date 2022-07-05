@@ -18,3 +18,4 @@ dvc
 joblib
 scikit-learn
 mlflow
+yaml
