@@ -34,11 +34,20 @@ Project Organization
 
 --------
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>.
 
 
 # Links:
     DagsHub: https://dagshub.com/anibhush/Anisha-20110-pset2
     https://dagshub.com/anibhush/Anisha-20110-pset2/experiments/#/
     
-
+# To run Model:
+    
+    dvc remote modify origin --local auth basic
+    dvc remote modify origin --local user <DAGSHUB_ID>
+    dvc remote modify origin --local password <DAGSHUB_TOKEN>
+    
+    export MLFLOW_TRACKING_USERNAME=<DAGSHUB_ID>
+    export MLFLOW_TRACKING_PASSWORD=<DAGSHUB_TOKEN>
+    
+    python3 src/models/train_model.py
